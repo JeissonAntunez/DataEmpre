@@ -14,13 +14,19 @@ const LoginForm: React.FC = () => {
           <label htmlFor="password">Contraseña:</label>
           <input type="password" id="password" name="password" required />
 
+            <li>
+                <a href="">Recuperar contraseña</a>
+                <a href="">Registrarse</a>
+            </li>  
           <button type="submit">Ingresar</button>
         </form>
       </div>
       <div className="login-right">
-        {/* Puedes poner una imagen, texto o dejarlo vacío */}
+        <h3>Hola como estamos</h3>
       </div>
     </div>
+
+
   );
 };
 
