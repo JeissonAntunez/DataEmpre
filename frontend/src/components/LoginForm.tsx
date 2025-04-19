@@ -2,11 +2,13 @@
 import React from 'react';
 import './LoginForm.css';
 
+
+
 const LoginForm: React.FC = () => {
   return (
     <div className="login-container">
       <div className="login-left">
-        <h2>Iniciar Sesión</h2>
+        <h2>Mi portal</h2>
         <form>
           <label htmlFor="email">Correo:</label>
           <input type="email" id="email" name="email" required />
@@ -14,11 +16,11 @@ const LoginForm: React.FC = () => {
           <label htmlFor="password">Contraseña:</label>
           <input type="password" id="password" name="password" required />
 
+          <button id='go' type="submit">Iniciar sesión</button>
             <li>
-                <a href="">Recuperar contraseña</a>
-                <a href="">Registrarse</a>
+                <a href="">¿Olvidaste tu contraseña?</a>
             </li>  
-          <button type="submit">Ingresar</button>
+          <button id='creareNew' type="submit">Crear cuenta  nueva</button>
         </form>
       </div>
       <div className="login-right">
