@@ -20,7 +20,7 @@ const LoginForm: React.FC = () => {
             <li>
                 <a href="">¿Olvidaste tu contraseña?</a>
             </li>  
-          <button id='creareNew' type="submit">Crear cuenta  nueva</button>
+          <button  id='creareNew' type="submit">Crear cuenta  nueva</button>
         </form>
       </div>
       <div className="login-right">

@@ -1,15 +1,17 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-// import './index.css'
-// import App from './App.tsx'
-import LoginForm from './components/LoginForm.tsx'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import LoginForm from './components/LoginForm.tsx';
 import NewAccount from './components/NewAccount.tsx';
-
-
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <NewAccount />
-    {/* <LoginForm /> */}
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<NewAccount />} />
+        <Route path="/login" element={<LoginForm />} />
+      </Routes>
+    </BrowserRouter>
   </StrictMode>,
-)
+);

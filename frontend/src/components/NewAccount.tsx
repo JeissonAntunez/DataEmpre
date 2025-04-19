@@ -1,6 +1,8 @@
 import React from 'react';
 import './css/newAccount.css';
 import { generateDays, generateMonths, generateYears } from '../utils/NewAccount';
+import { Link } from 'react-router-dom';
+
 
 const NewAccount: React.FC = () => {
 
@@ -8,23 +10,46 @@ const NewAccount: React.FC = () => {
         <div className="newAccount">
             <h1>Mi portal</h1>
             <form>
-                <span>Crea una cuenta</span>
+                <h2>Crea una cuenta</h2>
                 <hr />
-                <label>
-                    <input type="text" name="username" placeholder='Nombre' />
-                    <input type="text" name="lastname" placeholder='Apellido' />
+                <label className='username'>
+                    <input className='username1' type="text" name="username" placeholder='Nombre' />
+                    <input className='lastname1'  type="text" name="lastname" placeholder='Apellido' />
                 </label>
-                <label>
-                    Fecha de Nacimiento:
-                    <select name="day"> {generateDays()} </select>
-                    <select name="month"> {generateMonths()} </select>
-                    <select name="years"> {generateYears()} </select>
+                <label className='fecha'>
+                    <span className='fecha-letra'>Fecha de Nacimiento: </span>
+                    <div className="fecha-grid">
+                        <select name="day"> {generateDays()} </select>
+                        <select name="month"> {generateMonths()} </select>
+                        <select name="years"> {generateYears()} </select>
+                    </div>
                 </label>
-                <label>
-                    Confirmar Contraseña:
-                    <input type="password" name="confirmPassword" />
+                <label className='genero'>
+                    <span>Género:</span>
+                    <div className="genero-grid">
+                        <div className="genero_woman">
+                            <span>Mujer</span>
+                            <input type="radio" />
+                        </div>
+                        <div className="genero_men">
+                            <span>Hombre</span>
+                            <input type="radio" />
+                        </div>
+                        <div className="genero_x">
+                            <span>Personalizado</span>
+                            <input type="radio" />
+                        </div>
+                    </div>
                 </label>
-                <button type="submit">Crear Cuenta</button>
+                <label> 
+                    <input type="text" name="email" placeholder='Correo electrónico' />
+                </label>
+               <label> 
+                 <input type="password" name="password" placeholder='Contraseña nueva' />
+
+               </label>
+                <button type="submit">Registrarte</button>
+                <Link to="/login">¿Ya tienes una cuenta?</Link>
             </form>
         </div>
     );
